@@ -12,19 +12,13 @@
       min-height: 800px;
       border: 3px solid black;
       display: flex;
-      /* justify-content: space-evenly;  */
-
-      /* flex direction */
-      /* justify-content: flex-start;
-      flex-direction: row;
-      align-items: center; */
       gap: 20px;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      flex-wrap: wrap;
+      align-items: flex-start;
     }
     .box {
+      /*flex-shrink: 0;  prevent shrinking */
+      flex-shrink: 1;   /* allow growing */
+      min-width: 100px;
       height: 200px;
       width: 200px;
       background-color: blue;
@@ -32,6 +26,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    #box-1 {
+      /*flex-shrink: 0;   prevent shrinking */
+      /* flex-grow: 5; */
+      /* align-self: center; */
+      margin-right: auto;
+    }
+    @media (max-width: 600px) {
+      body {
+        flex-wrap: wrap;
+      }
     }
 
     
@@ -43,14 +48,11 @@
 
 <body>
 
-  <div class="box">box 1</div>
+  <div id="box-1" class="box">box 1</div>
   <div class="box">box 2</div>
   <div class="box">box 3</div>
   <div class="box">box 4</div>
   <div class="box">box 5</div>
-  <div class="box">box 6</div>
-  <div class="box">box 7</div>
-  <div class="box">box 8</div>
-  <div class="box">box 9</div>
+
 </body>
 </html>
