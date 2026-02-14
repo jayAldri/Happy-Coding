@@ -1,0 +1,22 @@
+.btn{
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  color: red;
+  background-color: rgb(243, 68, 68);
+  border: 3px solid red;
+  border-radius: 10px;
+
+  /* transition-property: transform;
+  transition-duration: 0.5s; takes how long the transition to complate
+  transition-timing-function: ease;
+  transition-delay:0s ; */
+
+  transition: transform 0.5s ease 0s;
+}
+
+.btn:hover{
+  transform: translateY(-10px);
+  background-color: rgb(243, 68, 68);
+  color: aliceblue;
+}
