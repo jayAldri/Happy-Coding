@@ -1,0 +1,30 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(235, 68, 68, 0.5);
+}
+
+
+
+.loadingBg {
+  width:  30%;
+  height: 30%;
+  border-radius: 100%;
+  border: 10px solid rgba(98, 72, 235, 0.5);
+  animation: ikot 2.2s ease-out infinite;
+}
+.loadingBg.loadingBg--delay{
+  animation-delay: 1s;
+}
+
+@keyframes ikot{
+  from {
+    transform: rotate(0);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
