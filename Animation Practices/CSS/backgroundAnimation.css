@@ -9,14 +9,16 @@ body{
 
 
 .loadingBg {
-  width:  30%;
-  height: 30%;
+  width:  100%;
+  height: 100%;
   border-radius: 100%;
   border: 10px solid rgba(98, 72, 235, 0.5);
   animation: ikot 2.2s ease-out infinite;
+  z-index: -1;
 }
 .loadingBg.loadingBg--delay{
   animation-delay: 1s;
+  z-index: -2;
 }
 
 @keyframes ikot{
