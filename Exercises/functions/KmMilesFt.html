@@ -45,6 +45,16 @@
     console.log(convertLength(5, 'miles', 'ft')); //answer 26400 ft
     console.log(convertLength(5, 'km', 'ft')); //answer 16405 ft
 
+
+    function conLength(length, from, to){
+
+      if(from === 'miles' && to === 'km'){
+        console.log(length * 1.6);
+      }
+
+    }
+
+    conLength(50, 'miles', 'km');
   </script>
   
 </body>
