@@ -15,12 +15,7 @@
   ">Show Quantity</button>
 
   <button onclick="
-    if(cartQuantity < 10){
-      cartQuantity ++;
-      console.log(`Cart Quantity: ${cartQuantity}`);
-    } else{
-      console.log('You reach your maximum quantity');
-    }
+    updateQuantity(1);
     
   ">Add to Cart</button>
 
@@ -104,6 +99,21 @@
   <script>
     let cartQuantity = 0;
     
+    function updateQuantity(change){
+      if(cartQuantity + change > 10){
+        cartQuantity + change;
+        alert('You reach your maximum quantity');
+        return;
+      }
+      if(cartQuantity + change < 0){
+        cartQuantity + change;
+        alert('Your cart is empty');
+        return;
+      }
+
+      cartQuantity += change;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    }
 
 
 
