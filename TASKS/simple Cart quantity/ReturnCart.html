@@ -36,12 +36,7 @@
   ">+5</button>
 
   <button onclick="
-    if(cartQuantity > 0){
-      cartQuantity --;
-      console.log(`Cart Quantity: ${cartQuantity}`);
-    } else{
-      console.log('Your cart is empty');
-    }
+    updateQuantity(-1);
   ">
     Remove from Cart
   </button>
