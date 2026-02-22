@@ -24,12 +24,7 @@
   ">+2</button>
 
   <button onclick="
-    if(cartQuantity < 10){
-      cartQuantity += 3;
-      console.log(`Cart Quantity: ${cartQuantity}`);
-    } else{
-      console.log('You reach your maximum quantity');
-    }
+    updateQuantity(3);
   ">+3</button>
 
   <button onclick="
