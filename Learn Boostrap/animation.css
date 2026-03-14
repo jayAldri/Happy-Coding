@@ -1,0 +1,140 @@
+/* ============================================================
+   INITIAL HIDDEN STATE FOR ALL ANIMATIONS
+============================================================ */
+
+.fade-up, .fade-down, .fade-left, .fade-right,
+.fade-up-left, .fade-up-right, .fade-down-left, .fade-down-right,
+.zoom-in, .flip, .rotate, .bounce, .slide-left,
+.slide-right, .slide-up, .swing, .pulse, .shake {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+
+/* ============================================================
+   ANIMATION ACTIVE STATE (SLOWER + SMOOTH)
+============================================================ */
+
+.fade-up.animate       { animation: fadeUp 1.4s ease-out forwards; }
+.fade-down.animate     { animation: fadeDown 1.4s ease-out forwards; }
+.fade-left.animate     { animation: fadeLeft 1.4s ease-out forwards; }
+.fade-right.animate    { animation: fadeRight 1.4s ease-out forwards; }
+
+.fade-up-left.animate     { animation: fadeUpLeft 1.4s ease-out forwards; }
+.fade-up-right.animate    { animation: fadeUpRight 1.4s ease-out forwards; }
+.fade-down-left.animate   { animation: fadeDownLeft 1.4s ease-out forwards; }
+.fade-down-right.animate  { animation: fadeDownRight 1.4s ease-out forwards; }
+
+.zoom-in.animate   { animation: zoomIn 1.4s ease-out forwards; }
+.flip.animate      { animation: flipIn 1.4s ease-out forwards; }
+.rotate.animate    { animation: rotateIn 1.4s ease-out forwards; }
+.bounce.animate    { animation: bounceIn 1.6s ease-out forwards; }
+
+.slide-left.animate   { animation: slideLeftIn 1.4s ease-out forwards; }
+.slide-right.animate  { animation: slideRightIn 1.4s ease-out forwards; }
+.slide-up.animate     { animation: slideUpIn 1.4s ease-out forwards; }
+
+.swing.animate    { animation: swingIn 1.6s ease-out forwards; }
+.pulse.animate    { animation: pulseIn 1.6s ease-in-out forwards; }
+.shake.animate    { animation: shakeIn 1.2s ease-out forwards; }
+
+
+/* ============================================================
+   KEYFRAMES (YOUR KEYFRAMES - UNCHANGED)
+============================================================ */
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(60px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeDown { from { opacity: 0; transform: translateY(-60px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeLeft { from { opacity: 0; transform: translateX(-60px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeRight { from { opacity: 0; transform: translateX(60px); } to { opacity: 1; transform: translateX(0); } }
+
+@keyframes fadeUpLeft { from { opacity: 0; transform: translate(-60px, 60px); } to { opacity: 1; transform: translate(0,0); } }
+@keyframes fadeUpRight { from { opacity: 0; transform: translate(60px, 60px); } to { opacity: 1; transform: translate(0,0); } }
+@keyframes fadeDownLeft { from { opacity: 0; transform: translate(-60px, -60px); } to { opacity: 1; transform: translate(0,0); } }
+@keyframes fadeDownRight { from { opacity: 0; transform: translate(60px, -60px); } to { opacity: 1; transform: translate(0,0); } }
+
+@keyframes zoomIn { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+@keyframes flipIn { from { opacity: 0; transform: rotateY(90deg); } to { opacity: 1; transform: rotateY(0); } }
+@keyframes rotateIn { from { opacity: 0; transform: rotate(-180deg) scale(0.5); } to { opacity: 1; transform: rotate(0deg) scale(1); } }
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideLeftIn { from { opacity: 0; transform: translateX(-150px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideRightIn { from { opacity: 0; transform: translateX(150px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideUpIn { from { opacity: 0; transform: translateY(150px); } to { opacity: 1; transform: translateY(0); } }
+
+@keyframes swingIn {
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes pulseIn {
+    0% { transform: scale(0.95); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes shakeIn {
+    0% { transform: translateX(-10px); opacity: 0; }
+    25% { transform: translateX(10px); opacity: 1; }
+    50% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+}
+
+
+/* ======================= SNOW FALLING ======================= */
+
+/* ======================= SNOW FALLING ======================= */
+
+/* Snowflake Styles */
+
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999999;
+}
+
+.snowflake {
+  position: absolute;
+  top: 0;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(var(--drift, 0)) translateY(120vh); }
+}
+
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    /* Navbar shadow */
+    .nav-shadow {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Ensure navbar above snowflakes */
+    .navbar {
+      z-index: 10000;
+    }
+
+
