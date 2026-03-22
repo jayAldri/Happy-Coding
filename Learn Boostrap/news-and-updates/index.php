@@ -1,4 +1,4 @@
-<link href="../../ASSETS/BOOTSTRAP-v5.3/css/bootstrap.min.css" rel="stylesheet">
+ <link href="../../ASSETS/BOOTSTRAP-v5.3/css/bootstrap.min.css" rel="stylesheet">
 <link href="../../ASSETS/CSS/news.css" rel="stylesheet">
 <link href="../../header.css" rel="stylesheet">
 <link rel="stylesheet" href="../../ASSETS/CSS/animation.css">
@@ -16,7 +16,7 @@
 
 <section class="blog-posts container">
 
-    <!-- Header Banner -->
+
     <div class="news-header">
         <img src="../../ASSETS/IMAGES/NEWS/image13-today-news.jpg" alt="">
         <h2>LATEST NEWS & UPDATES</h2>
@@ -538,7 +538,7 @@ STUDENTS ARE ENCOURAGED TO ENROLL IN THEIR RESPECTIVE SCHEDULE TO AVOID INCONVEN
 
 
       </div>
-      <!-- PAGINATION -->
+
       <nav class="mt-5">
         <ul id="pagination" class="pagination justify-content-center"></ul>
       </nav>
@@ -632,8 +632,7 @@ window.onclick = function(event){
 
 
 </script>
-    <!-- NEWS POSTS -->
 
 <script src="../../ASSETS/BOOTSTRAP-v5.3/js/bootstrap.bundle.min.js"></script>
 
-<?php include "../../sub-footer.php"; ?>
+<?php include "../../sub-footer.php"; ?> -->
